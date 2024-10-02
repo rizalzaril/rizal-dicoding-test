@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-blue: #010d18;
+  --young-blue: #6eacda;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-blue);
+}
+
+header.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+header.nav-container .nav-logo {
+  color: var(--young-blue);
+}
+
+header.nav-container .nav-list ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem 2rem;
+  padding-left: 0;
+  padding-top: 10px;
+}
+
+header.nav-container .nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header.nav-container .nav-list li a:hover {
+  color: var(--young-blue);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+}
+
+main .hero-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  max-width: 1200px;
+  align-items: center;
+  margin-inline: auto;
+  height: 500px;
+}
+
+main .hero-container .hero-caption {
+  flex: 1;
+  display: flex;
+  padding-block: 12px;
+  flex-direction: column;
+  width: 50%;
+  height: 500px;
+}
+
+main .hero-container .hero-title h1 {
+  font-size: 38px;
+  font-weight: bold;
+  background: linear-gradient(to right, #8fe993, #00d2ff, #3a7bd5);
+  -webkit-background-clip: text;
+  color: transparent;
+  width: 100%;
+}
+
+main .hero-container .hero-description {
+  font-size: 20px;
+  color: rgb(182, 179, 179);
+}
+
+main .hero-container .hero-img-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px;
+}
+
+main .hero-container .hero-img-bg {
+  position: relative;
+  background-color: var(--young-blue);
+  border-radius: 0px 120px;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+main .hero-container .hero-img-container .hero-img {
+  object-fit: cover;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+main .hero-container .hero-img-container .name-box {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  margin-left: 150px;
+  margin-top: 260px;
+  border-radius: 0px 50px;
+  display: flex;
+  flex: 1;
+  height: auto;
+  font-weight: 400;
+  box-shadow: 1px 1px 8px rgba(92, 195, 255, 0.5);
+}
+
+main .hero-container .hero-img-container .name-box .name {
+  color: var(--young-blue);
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 28px;
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  width: auto;
+}
+
+.btn-primary {
+  background-color: var(--young-blue);
+  color: #010d18;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: solid 1px var(--young-blue);
+  color: #00d2ff;
+}
+
+.mt-1 {
+  margin-top: 2rem;
+}
+
+/* RESPONSIVE SETTINGS */
+
+@media (max-width: 768px) {
+  header.nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.nav-container .nav-list ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  main .hero-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  main .hero-container .hero-caption {
+    width: 100%;
+    text-align: center;
+    padding-block: 1rem;
+  }
+
+  main .hero-container .hero-title h1 {
+    font-size: 24px;
+  }
+
+  main .hero-container .hero-description {
+    font-size: 14px;
+    color: rgb(182, 179, 179);
+  }
+
+  main .hero-container .hero-img-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  main .hero-container .hero-img-bg {
+    height: 250px;
+    width: 250px;
+    border-radius: 0px;
+  }
+
+  main .hero-container .hero-img-container .name-box {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 220px;
+    display: none;
+  }
+}
