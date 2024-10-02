@@ -178,6 +178,7 @@ main .hero-container .hero-img-container .name-box .name {
     gap: 0.1rem;
     padding-left: 0;
     text-align: center;
+    display: none;
   }
 
   header.nav-container .nav-list li a {
@@ -187,7 +188,6 @@ main .hero-container .hero-img-container .name-box .name {
   main .hero-container {
     flex-direction: column;
     height: auto;
-    padding: 1rem;
   }
 
   main .hero-container .hero-caption {
