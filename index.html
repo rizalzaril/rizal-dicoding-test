@@ -26,15 +26,19 @@
       <nav class="nav-list">
         <ul>
           <li><a href="">Beranda</a></li>
-          <li><a href="">Tentang</a></li>
+          <li><a href="#about">Tentang</a></li>
           <li><a href="">Portofolio</a></li>
           <li><a href="">Kontak</a></li>
         </ul>
+
+        <div class="hamburger-menu">
+          <button><i class="fa-solid fa-bars"></i></button>
+        </div>
       </nav>
     </header>
 
-    <!-- Hero Section -->
     <main>
+      <!-- Hero Section -->
       <div class="hero-container">
         <div class="hero-img-container">
           <div class="hero-img-bg">
@@ -57,11 +61,46 @@
           </div>
         </div>
       </div>
-    </main>
-    <!-- End Hero Section -->
+      <!-- End Hero Section -->
 
-    <main></main>
+      <!-- Content Section -->
+      <div class="content">
+        <div id="about" class="about">
+          <div class="content-caption">
+            <div class="content-title">
+              <h2>Tentang</h2>
+            </div>
+            <article>
+              <p>
+                Hallo, perkenalkan nama saya <span>rizal liyan syah</span>. Saya
+                adalah pria kelahiran tahun 2000. Saya lahir di kota
+                <span>Purbalingga Jawa Tengah</span>. Saya mulai menekuni
+                pemrograman website pada saat setelah lulus kuliah. Pemrograman
+                website yang saya minati adalah di bagian <span>Frontend</span>,
+                karena saya suka sekali dengan <span>visual dan desain</span> .
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <aside>
+          <button id="toggleBtn">Lihat Biodata</button>
+          <div id="biodata-card">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+              consectetur fugiat magni, incidunt similique consequuntur sequi,
+              facere atque laborum adipisci laudantium. Maiores animi blanditiis
+              temporibus perspiciatis voluptate itaque amet iure.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <!-- EndContent Section -->
+    </main>
 
     <footer></footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

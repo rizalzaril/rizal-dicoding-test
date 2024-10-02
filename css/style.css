@@ -16,6 +16,10 @@ body {
   background-color: var(--dark-blue);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header.nav-container {
   width: 100%;
   max-width: 1200px;
@@ -25,6 +29,9 @@ header.nav-container {
   justify-content: space-between;
   align-items: center;
   z-index: 9999;
+  position: sticky;
+  top: 0;
+  background-color: var(--dark-blue);
 }
 
 header.nav-container .nav-logo {
@@ -49,14 +56,15 @@ header.nav-container .nav-list li a:hover {
   color: var(--young-blue);
 }
 
+header.nav-container .nav-list .hamburger-menu {
+  display: none;
+}
+
 main {
-  flex: 1;
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
   padding: 2rem 4rem;
-  display: flex;
-  align-items: center;
 }
 
 main .hero-container {
@@ -141,6 +149,100 @@ main .hero-container .hero-img-container .name-box .name {
   font-size: 28px;
 }
 
+main .content {
+  display: flex;
+  margin-top: 64px;
+  gap: 2rem;
+}
+
+main .content .content-caption {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  opacity: 1; /* Start fully visible */
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+main .content .content-caption .content-title h2 {
+  color: var(--young-blue);
+}
+
+main .content .content-caption article {
+  color: rgb(182, 179, 179);
+  font-size: 20px;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+main .content .content-caption article span {
+  text-transform: capitalize;
+  color: var(--young-blue);
+}
+
+#biodata-card {
+  background-color: #3a7bd5;
+  padding: 12px;
+  margin-top: 24px;
+}
+
+#biodata-card {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+#biodata-card.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  height: auto;
+  visibility: visible;
+}
+
+main .content aside {
+  width: 100%;
+}
+main .content aside.visible {
+  width: 100%;
+}
+
+#biodata-card {
+  background-color: #3a7bd5;
+  padding: 12px;
+  margin-top: 24px;
+}
+
+#biodata-card {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+#biodata-card.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  height: auto;
+  visibility: visible;
+}
+
+main .content aside button {
+  background-color: #6eacda;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+main .content aside button:hover {
+  background-color: transparent;
+  color: var(--young-blue);
+  border: solid 1px var(--young-blue);
+}
+
 .btn {
   padding: 1rem;
   border-radius: 10px;
@@ -160,29 +262,32 @@ main .hero-container .hero-img-container .name-box .name {
   color: #00d2ff;
 }
 
-.mt-1 {
-  margin-top: 2rem;
-}
-
 /* RESPONSIVE SETTINGS */
 
 @media (max-width: 768px) {
   header.nav-container {
-    flex-direction: column;
     align-items: center;
     padding: 1rem;
+    position: sticky;
+    top: 0;
   }
 
-  header.nav-container .nav-list {
-    flex-direction: column;
-    gap: 0.1rem;
-    padding-left: 0;
-    text-align: center;
+  header.nav-container .nav-list ul {
     display: none;
   }
-
   header.nav-container .nav-list li a {
     font-size: 14px;
+  }
+
+  header.nav-container .nav-list .hamburger-menu {
+    display: block;
+  }
+
+  header.nav-container .nav-list .hamburger-menu button {
+    background-color: transparent;
+    border: none;
+    color: var(--young-blue);
+    font-size: 24px;
   }
 
   main .hero-container {
@@ -230,5 +335,23 @@ main .hero-container .hero-img-container .name-box .name {
 
   main .hero-container .hero-img-container .name-box {
     display: none;
+  }
+
+  main .content {
+    flex-direction: column;
+  }
+
+  main .content .content-caption {
+    width: 100%;
+  }
+
+  main .content .content-caption article {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  #biodata-card {
+    visibility: visible;
+    display: block;
   }
 }
