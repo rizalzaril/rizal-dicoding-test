@@ -170,11 +170,12 @@ main .hero-container .hero-img-container .name-box .name {
   header.nav-container {
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
   }
 
-  header.nav-container .nav-list ul {
+  header.nav-container .nav-list {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     padding-left: 0;
     text-align: center;
   }
@@ -192,29 +193,38 @@ main .hero-container .hero-img-container .name-box .name {
   }
 
   main .hero-container .hero-title h1 {
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
   }
 
   main .hero-container .hero-description {
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(182, 179, 179);
+    margin-bottom: 1rem;
   }
 
   main .hero-container .hero-img-container {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
   }
 
   main .hero-container .hero-img-bg {
-    height: 250px;
-    width: 250px;
+    height: 220px;
+    width: 220px;
+    border-radius: 0%;
+  }
+
+  main .hero-container .hero-img-container .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 0px;
   }
 
   main .hero-container .hero-img-container .name-box {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-top: 220px;
     display: none;
   }
 }
