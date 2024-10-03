@@ -110,21 +110,25 @@ main .hero-container .hero-img-container {
 }
 
 main .hero-container .hero-img-bg {
-  position: relative;
+  position: absolute;
   background-color: var(--young-blue);
-  border-radius: 0px 120px;
-  height: 300px;
-  width: 300px;
+  border-radius: 0px 200px 0px;
+  height: 400px;
+  width: 400px;
+  top: 175px;
+  left: 50px;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-main .hero-container .hero-img-container .hero-img {
-  object-fit: cover;
+main .hero-container .hero-img-container .hero-img-bg .hero-img {
   border-radius: inherit;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 10;
+  position: absolute;
 }
 
 main .hero-container .hero-img-container .name-box {
@@ -133,10 +137,9 @@ main .hero-container .hero-img-container .name-box {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
   margin-left: 150px;
-  margin-top: 260px;
+  margin-top: 470px;
   border-radius: 0px 50px;
   display: flex;
-  flex: 1;
   height: auto;
   font-weight: 400;
   box-shadow: 1px 1px 8px rgba(92, 195, 255, 0.5);
@@ -313,32 +316,34 @@ main .content aside button:hover {
     margin-bottom: 1rem;
   }
 
-  main .hero-container .hero-img-container {
-    width: 100%;
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
+  main .hero-container .hero-img-container .name-box {
+    width: auto;
+    top: -400px;
+    right: -50px;
+    position: absolute;
   }
 
-  main .hero-container .hero-img-bg {
-    height: 220px;
-    width: 220px;
-    border-radius: 0%;
+  main .hero-container .hero-img-container .name-box .name {
+    font-size: 20px;
+  }
+
+  main .hero-container .hero-img-container .hero-img-bg {
+    width: 370px;
+    height: 100px;
+    top: 125px;
+    left: -100px;
+    border-radius: 0px 50px;
   }
 
   main .hero-container .hero-img-container .hero-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0px;
-  }
-
-  main .hero-container .hero-img-container .name-box {
-    display: none;
+    position: relative;
+    left: -100px;
   }
 
   main .content {
     flex-direction: column;
+    display: flex;
   }
 
   main .content .content-caption {
@@ -353,5 +358,37 @@ main .content aside button:hover {
   #biodata-card {
     visibility: visible;
     display: block;
+  }
+}
+@media (max-width: 1025px) {
+  main .hero-container .hero-img-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50px;
+  }
+
+  main .hero-container .hero-img-bg {
+    position: absolute;
+    background-color: var(--young-blue);
+    border-radius: 0px;
+    height: 200px;
+    width: 200px;
+    top: 24px;
+    left: 0px;
+    overflow: hidden;
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  main .hero-container .hero-img-container .hero-img-bg .hero-img {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
   }
 }
