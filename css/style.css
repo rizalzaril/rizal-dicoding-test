@@ -392,3 +392,29 @@ main .content aside button:hover {
     position: absolute;
   }
 }
+
+/* For very small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  header.nav-container {
+    padding: 0.5rem;
+  }
+
+  main .hero-container .hero-title h1 {
+    font-size: 18px;
+  }
+
+  main .hero-container .hero-description {
+    font-size: 14px;
+  }
+
+  main .hero-container .hero-img-container .hero-img-bg {
+    width: 250px;
+    height: 80px;
+    top: 100px;
+    left: -50px;
+  }
+
+  main .hero-container .hero-img-container .hero-img {
+    left: 0;
+  }
+}
