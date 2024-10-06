@@ -1,41 +1,18 @@
-const button = document.getElementById("toggleBtn");
-const biodataCard = document.getElementById("biodata-card");
-const eyeIcon = document.getElementById("eyeIcon");
-const contentCaption = document.querySelector("main .content .about-caption");
+// Toggle menu
 
-// Initialize the visibility state
-let isVisible = false;
+// panggil id dari button html hamburger
+const menuToggle = document.getElementById("menuToggle");
 
-button.addEventListener("click", () => {
-  isVisible = !isVisible;
+// panggil selector dari css
+const menu = document.querySelector("header.nav-container .nav-list ul");
 
-  if (isVisible) {
-    // Fade out and hide biodata
-    setTimeout(() => {
-      biodataCard.classList.add("visible");
-      button.textContent = "Hide Biodata";
-    }, 100);
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+
+  // ganti icon saat menu tampil
+  if (menu.classList.contains("active")) {
+    menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
   } else {
-    // Show biodata
-    setTimeout(() => {
-      biodataCard.classList.remove("visible");
-      button.textContent = "Show Biodata";
-    }, 100);
-  }
-
-  if (window.innerWidth > 768) {
-    if (contentCaption.style.width === "80%") {
-      contentCaption.style.opacity = "1"; // Fade out
-      setTimeout(() => {
-        contentCaption.style.width = "100%";
-        contentCaption.style.opacity = "1"; // Fade in
-      }, 100);
-    } else {
-      contentCaption.style.opacity = "1"; // Fade out
-      setTimeout(() => {
-        contentCaption.style.width = "80%";
-        contentCaption.style.opacity = "1"; // Fade in
-      }, 100);
-    }
+    menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
   }
 });

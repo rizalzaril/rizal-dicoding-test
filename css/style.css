@@ -272,6 +272,28 @@ main .content aside .aside-container .aside-caption-group p {
     font-size: 24px;
   }
 
+  header.nav-container .nav-list ul {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  header.nav-container .nav-list ul.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    background-color: var(--dark-blue);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    height: auto;
+    margin: 0;
+    top: 150px;
+  }
+
   main .hero-container {
     flex-direction: column;
     height: auto;
