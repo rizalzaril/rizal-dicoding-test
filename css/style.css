@@ -169,10 +169,12 @@ main .content aside {
   background-color: transparent;
   height: auto;
   width: 30%;
-  padding: 12px;
+  padding: 0px;
   margin-inline: auto;
   border-radius: 10px;
   transition: transform ease 0.5s;
+  position: relative;
+  overflow: hidden;
 }
 
 main .content aside:hover {
@@ -193,7 +195,6 @@ main .content aside .aside-container .aside-img-bg {
   width: 100%;
   height: 200px;
   overflow: hidden;
-  border-radius: initial;
 }
 
 main .content aside .aside-container .aside-img-bg .aside-img {
@@ -213,6 +214,7 @@ main .content aside .aside-container .aside-caption-group {
   display: flex;
   gap: 1rem;
   color: var(--young-blue);
+  padding: 12px;
 }
 
 main .content aside .aside-container .aside-caption-group p {
@@ -276,10 +278,19 @@ main .content aside .aside-container .aside-caption-group p {
     margin-top: -50px;
   }
 
+  main .hero-container .hero-img-container .hero-img {
+    width: 200px;
+    min-width: 150px;
+    margin: auto;
+    z-index: 2;
+    transition: transform ease 0.2s;
+  }
+
   main .hero-container .hero-caption {
     width: 100%;
     text-align: center;
     padding-block: 1rem;
+    margin-top: -50px;
   }
 
   main .hero-container .hero-title h1 {
@@ -355,13 +366,36 @@ main .content aside .aside-container .aside-caption-group p {
     display: flex;
     gap: 1rem;
     color: var(--young-blue);
+    padding: 2px;
   }
 
   main .content aside .aside-container .aside-caption-group p {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: -2px;
     margin-left: 0px;
     text-align: start;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  main .content aside .aside-container {
+    width: 100%;
+  }
+
+  main .content aside .aside-container .aside-img-bg {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    padding: 14px;
+    background-color: #3a7bd5;
+  }
+
+  main .content aside .aside-container .aside-img-bg .aside-img {
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+    top: 0px;
   }
 }
 
@@ -388,6 +422,21 @@ main .content aside .aside-container .aside-caption-group p {
   main .content .about .about-caption article span {
     text-transform: capitalize;
     color: var(--young-blue);
+  }
+
+  main .content aside .aside-container .aside-img-bg {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    padding: 1px;
+  }
+
+  main .content aside .aside-container .aside-img-bg .aside-img {
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+    top: 0px;
   }
 }
 
