@@ -1,7 +1,7 @@
 const button = document.getElementById("toggleBtn");
 const biodataCard = document.getElementById("biodata-card");
 const eyeIcon = document.getElementById("eyeIcon");
-const contentCaption = document.querySelector("main .content .content-caption");
+const contentCaption = document.querySelector("main .content .about-caption");
 
 // Initialize the visibility state
 let isVisible = false;
@@ -13,13 +13,13 @@ button.addEventListener("click", () => {
     // Fade out and hide biodata
     setTimeout(() => {
       biodataCard.classList.add("visible");
-      button.textContent = "Tutup Biodata";
+      button.textContent = "Hide Biodata";
     }, 100);
   } else {
     // Show biodata
     setTimeout(() => {
       biodataCard.classList.remove("visible");
-      button.textContent = "Lihat Biodata";
+      button.textContent = "Show Biodata";
     }, 100);
   }
 

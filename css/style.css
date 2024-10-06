@@ -47,13 +47,14 @@ header.nav-container .nav-list ul {
 }
 
 header.nav-container .nav-list li a {
-  color: white;
+  color: var(--young-blue);
   text-decoration: none;
   font-weight: 500;
+  font-size: 18px;
 }
 
 header.nav-container .nav-list li a:hover {
-  color: var(--young-blue);
+  color: white;
 }
 
 header.nav-container .nav-list .hamburger-menu {
@@ -70,7 +71,7 @@ main {
 main .hero-container {
   display: flex;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 2rem;
   max-width: 1200px;
   align-items: center;
   margin-inline: auto;
@@ -109,52 +110,32 @@ main .hero-container .hero-img-container {
   top: -50px;
 }
 
-main .hero-container .hero-img-bg {
-  position: relative;
-  background-color: var(--young-blue);
-  border-radius: 0px 120px;
-  height: 300px;
-  width: 300px;
-  overflow: hidden;
-  z-index: 1;
-}
-
 main .hero-container .hero-img-container .hero-img {
-  object-fit: cover;
-  border-radius: inherit;
-  width: 80%;
+  width: 300px;
+  min-width: 250px;
+  margin: auto;
   z-index: 2;
+  transition: transform ease 0.2s;
 }
 
-main .hero-container .hero-img-container .name-box {
-  position: absolute;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 20px;
-  margin-left: 150px;
-  margin-top: 260px;
-  border-radius: 0px 50px;
-  display: flex;
-  flex: 1;
-  height: auto;
-  font-weight: 400;
-  box-shadow: 1px 1px 8px rgba(92, 195, 255, 0.5);
-}
-
-main .hero-container .hero-img-container .name-box .name {
-  color: var(--young-blue);
-  font-weight: 500;
-  letter-spacing: 2px;
-  font-size: 28px;
+main .hero-container .hero-img-container .hero-img:hover {
+  filter: grayscale(1);
+  cursor: pointer;
+  transform: scale(1.1) rotate(-12deg);
 }
 
 main .content {
   display: flex;
-  margin-top: 64px;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+main .content .about {
+  display: flex;
   gap: 2rem;
 }
 
-main .content .content-caption {
+main .content .about .about-caption {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -163,91 +144,92 @@ main .content .content-caption {
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-main .content .content-caption .content-title h2 {
+main .content .about .about-caption .about-title h2 {
   color: var(--young-blue);
 }
 
-main .content .content-caption article {
+main .content .about .about-caption article {
   color: rgb(182, 179, 179);
   font-size: 20px;
   line-height: 2rem;
   text-align: justify;
 }
 
-main .content .content-caption article span {
+main .content .about .about-caption article span {
   text-transform: capitalize;
   color: var(--young-blue);
 }
 
-#biodata-card {
-  background-color: #3a7bd5;
-  padding: 12px;
-  margin-top: 24px;
-}
-
-#biodata-card {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-#biodata-card.visible {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-  height: auto;
-  visibility: visible;
-}
-
 main .content aside {
-  width: 100%;
-}
-main .content aside.visible {
-  width: 100%;
-}
-
-#biodata-card {
-  background-color: #3a7bd5;
-  padding: 12px;
-  margin-top: 24px;
-}
-
-#biodata-card {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-#biodata-card.visible {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 14px rgba(48, 160, 235, 0.5);
+  border: solid 1px var(--young-blue);
+  background-color: transparent;
   height: auto;
-  visibility: visible;
+  width: 30%;
+  padding: 12px;
+  margin-inline: auto;
+  border-radius: 10px;
+  transition: transform ease 0.5s;
 }
 
-main .content aside button {
-  background-color: #6eacda;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
-}
-main .content aside button:hover {
+main .content aside:hover {
+  box-shadow: 1px 1px 14px rgba(48, 160, 235, 0.5);
   background-color: transparent;
   color: var(--young-blue);
-  border: solid 1px var(--young-blue);
+  transform: scale(1.05) rotate(5deg);
+  cursor: pointer;
+}
+
+main .content aside .aside-container {
+  display: flex;
+  flex-direction: column;
+}
+
+main .content aside .aside-container .aside-img-bg {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: initial;
+}
+
+main .content aside .aside-container .aside-img-bg .aside-img {
+  object-fit: cover;
+  width: 100%;
+  position: relative;
+  top: -70px;
+}
+
+main .content aside .aside-container .aside-caption {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+main .content aside .aside-container .aside-caption-group {
+  display: flex;
+  gap: 1rem;
+  color: var(--young-blue);
+}
+
+main .content aside .aside-container .aside-caption-group p {
+  font-size: 16px;
+  margin-top: -2px;
+  margin-left: 0px;
+  text-align: start;
 }
 
 .btn {
   padding: 1rem;
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 18px;
   width: auto;
+  border: none;
+  margin-top: 24px;
 }
 
 .btn-primary {
@@ -259,11 +241,12 @@ main .content aside button:hover {
   background-color: transparent;
   border: solid 1px var(--young-blue);
   color: #00d2ff;
+  cursor: pointer;
 }
 
 /* RESPONSIVE SETTINGS */
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   header.nav-container {
     align-items: center;
     padding: 1rem;
@@ -317,40 +300,97 @@ main .content aside button:hover {
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
+    order: -1;
   }
 
-  main .hero-container .hero-img-bg {
-    height: 220px;
-    width: 220px;
-    border-radius: 0%;
-  }
-
-  main .hero-container .hero-img-container .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0px;
-  }
-
-  main .hero-container .hero-img-container .name-box {
-    display: none;
-  }
-
-  main .content {
+  main .content .about {
     flex-direction: column;
   }
 
-  main .content .content-caption {
+  main .content .about-caption {
+    width: 1200%;
+  }
+
+  main .content .about-caption article p {
+    font-size: 16px;
     width: 100%;
   }
 
-  main .content .content-caption article {
-    font-size: 14px;
+  main .content aside {
+    display: flex;
     width: 100%;
+    padding: 12px;
   }
 
-  #biodata-card {
-    visibility: visible;
-    display: block;
+  main .content aside .aside-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  main .content aside .aside-container .aside-img-bg {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  main .content aside .aside-container .aside-img-bg .aside-img {
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+    top: -10px;
+  }
+
+  main .content aside .aside-container .aside-caption {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+  }
+
+  main .content aside .aside-container .aside-caption-group {
+    display: flex;
+    gap: 1rem;
+    color: var(--young-blue);
+  }
+
+  main .content aside .aside-container .aside-caption-group p {
+    font-size: 16px;
+    margin-top: -2px;
+    margin-left: 0px;
+    text-align: start;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  header.nav-container {
+    max-width: 90%;
+  }
+
+  main .content .about {
+    gap: 1rem;
+  }
+
+  main .content .about .about-caption .about-title h2 {
+    color: var(--young-blue);
+  }
+
+  main .content .about .about-caption article {
+    color: rgb(182, 179, 179);
+    font-size: 16px;
+    line-height: 2rem;
+    text-align: justify;
+  }
+
+  main .content .about .about-caption article span {
+    text-transform: capitalize;
+    color: var(--young-blue);
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  header.nav-container {
+    max-width: 90%;
   }
 }
