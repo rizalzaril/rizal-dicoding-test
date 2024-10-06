@@ -307,10 +307,6 @@ main .content aside .aside-container .aside-caption-group p {
     flex-direction: column;
   }
 
-  main .content .about-caption {
-    width: 1200%;
-  }
-
   main .content .about-caption article p {
     font-size: 16px;
     width: 100%;
