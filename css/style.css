@@ -65,7 +65,7 @@ main {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
 }
 
 main .hero-container {
@@ -248,10 +248,8 @@ main .content aside .aside-container .aside-caption-group p {
 
 @media only screen and (max-width: 768px) {
   header.nav-container {
+    width: 1200px;
     align-items: center;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
   }
 
   header.nav-container .nav-list ul {
@@ -275,6 +273,7 @@ main .content aside .aside-container .aside-caption-group p {
   main .hero-container {
     flex-direction: column;
     height: auto;
+    margin-top: -50px;
   }
 
   main .hero-container .hero-caption {
@@ -301,6 +300,13 @@ main .content aside .aside-container .aside-caption-group p {
     display: flex;
     justify-content: center;
     order: -1;
+  }
+
+  main {
+    width: 100%;
+    margin-inline: auto;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   main .content .about {
@@ -336,13 +342,13 @@ main .content aside .aside-container .aside-caption-group p {
     object-fit: cover;
     width: 100%;
     position: relative;
-    top: -10px;
+    top: 0px;
   }
 
   main .content aside .aside-container .aside-caption {
     display: flex;
     flex-direction: column;
-    margin-top: 32px;
+    width: 100%;
   }
 
   main .content aside .aside-container .aside-caption-group {
