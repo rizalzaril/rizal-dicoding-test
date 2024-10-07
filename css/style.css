@@ -303,7 +303,7 @@ main .content aside .aside-container .aside-caption-group p {
 
 .contact-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 100px;
   gap: 6rem;
   margin-bottom: 100px;
@@ -311,6 +311,7 @@ main .content aside .aside-container .aside-caption-group p {
 
 .contact-container .form-container {
   display: flex;
+  justify-content: center;
 }
 
 .contact-container .form-container .form-group {
@@ -528,19 +529,6 @@ main .content aside .aside-container .aside-caption-group p {
 
   .contact-container {
     flex-direction: column;
-  }
-
-  .contact-container .form-container {
-    margin-top: -50px;
-  }
-
-  .contact-container .form-container .form-group {
-    width: 320px;
-    justify-content: center;
-  }
-
-  .contact-container .maps {
-    max-width: 320px;
   }
 
   .footer p {
