@@ -27,8 +27,8 @@
         <ul>
           <li><a href="">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="">Portofolio</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#portofolio">Portofolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
         <div class="hamburger-menu">
@@ -61,12 +61,11 @@
       <!-- Content Section -->
       <div class="content">
         <!-- ABOUT SECTION -->
+
         <section id="about">
-          <div class="about">
+          <h2 class="header-title">Tentang</h2>
+          <div class="about fadeEffect">
             <div class="about-caption">
-              <div class="about-title">
-                <h2>Tentang</h2>
-              </div>
               <article>
                 <p>
                   Hallo, perkenalkan nama saya <span>rizal liyan syah</span>.
@@ -107,12 +106,89 @@
           </div>
         </section>
         <!-- END ABOUT SECTION -->
+
+        <!-- PORTOFOLIO -->
+        <h2 class="header-title">Portofolio</h2>
+        <section id="portofolio">
+          <div class="box-container fadeEffect">
+            <div class="box">
+              <h1>Box 1</h1>
+            </div>
+            <div class="box">
+              <h1>Box 2</h1>
+            </div>
+            <div class="box">
+              <h1>Box 3</h1>
+            </div>
+            <div class="box">
+              <h1>Box 4</h1>
+            </div>
+          </div>
+        </section>
+        <!-- END PORTOFOLIO -->
+
+        <!-- CONTACT -->
+        <h2 class="header-title">Contact</h2>
+        <section id="contact">
+          <div class="contact-container">
+            <div class="form-container">
+              <form action="">
+                <div class="form-group">
+                  <label for="name">Nama</label>
+                  <input
+                    id="name"
+                    class="form-control"
+                    type="text"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    class="form-control"
+                    type="text"
+                    placeholder="Your email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">message</label>
+                  <input
+                    id="message"
+                    class="form-control"
+                    type="text"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div class="mb-1">
+                  <button class="btn btn-primary text-size-md">Submit</button>
+                </div>
+              </form>
+            </div>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31734.089608506332!2d106.83865940619545!3d-6.1627274869484365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5a67f1668f7%3A0xcbffcecd3c26b8d1!2sKec.%20Kemayoran%2C%20Kota%20Jakarta%20Pusat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1728262118233!5m2!1sid!2sid"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              class="maps"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+        <!-- END CONTACT -->
       </div>
 
       <!-- EndContent Section -->
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span> Rizal Liyan Syah. All rights reserved.
+        </p>
+      </div>
+    </footer>
 
     <script src="./js/script.js"></script>
   </body>
