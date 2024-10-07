@@ -370,13 +370,14 @@ main .content aside .aside-container .aside-caption-group p {
 
 @media only screen and (max-width: 768px) {
   header.nav-container {
-    width: 1200px;
+    width: 100%; /* Use 100% width for better responsiveness */
     align-items: center;
   }
 
   header.nav-container .nav-list ul {
     display: none;
   }
+
   header.nav-container .nav-list li a {
     font-size: 14px;
   }
@@ -421,7 +422,8 @@ main .content aside .aside-container .aside-caption-group p {
   }
 
   main .hero-container .hero-img-container .hero-img {
-    width: 200px;
+    width: 100%; /* Use 100% for responsiveness */
+    max-width: 200px;
     min-width: 150px;
     margin: auto;
     z-index: 2;
@@ -529,14 +531,13 @@ main .content aside .aside-container .aside-caption-group p {
 
   .contact-container {
     flex-direction: column;
-  }
-
-  .contact-container .form-container .form-group {
-    max-width: 300px;
+    align-items: center; /* Center content in contact container */
   }
 
   .contact-container .maps {
+    width: 100%; /* Use 100% for responsiveness */
     max-width: 300px;
+    height: auto; /* Adjust height automatically */
   }
 
   .footer p {
@@ -573,7 +574,7 @@ main .content aside .aside-container .aside-caption-group p {
 
   main .content aside .aside-container .aside-img-bg {
     width: 100%;
-    height: 200px;
+    height: auto; /* Use auto height */
     overflow: hidden;
     display: flex;
     padding: 1px;
@@ -595,22 +596,31 @@ main .content aside .aside-container .aside-caption-group p {
   .contact-container {
     gap: 4rem;
   }
+
   .contact-container .form-container {
+    width: 100%; /* Use 100% width */
+    max-width: 400px; /* Set a maximum width for the form */
     margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content in form container */
   }
 
   .contact-container .maps {
-    width: 400px;
-    height: 400px;
+    width: 100%; /* Use 100% for responsiveness */
+    height: auto; /* Adjust height automatically */
   }
 }
 
 @media screen and (max-width: 500px) {
   .contact-container .form-container .form-group {
-    max-width: 270px;
+    width: 100%; /* Use 100% width for form groups */
+    max-width: 280px;
   }
 
   .contact-container .maps {
-    max-width: 270px;
+    width: 100%; /* Use 100% for responsiveness */
+    max-width: 280px;
+    height: auto; /* Adjust height automatically */
   }
 }
