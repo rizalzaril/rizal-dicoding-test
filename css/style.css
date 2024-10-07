@@ -311,7 +311,7 @@ main .content aside .aside-container .aside-caption-group p {
 
 .contact-container .form-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .contact-container .form-container .form-group {
@@ -531,6 +531,14 @@ main .content aside .aside-container .aside-caption-group p {
     flex-direction: column;
   }
 
+  .contact-container .form-container .form-group {
+    max-width: 300px;
+  }
+
+  .contact-container .maps {
+    max-width: 300px;
+  }
+
   .footer p {
     margin: 0;
     color: var(--young-blue);
@@ -594,5 +602,15 @@ main .content aside .aside-container .aside-caption-group p {
   .contact-container .maps {
     width: 400px;
     height: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-container .form-container .form-group {
+    max-width: 270px;
+  }
+
+  .contact-container .maps {
+    max-width: 270px;
   }
 }
